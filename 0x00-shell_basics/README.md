@@ -1,1 +1,1 @@
-a script that lists all files 
+added readme
