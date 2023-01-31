@@ -17,6 +17,22 @@ sylvain@ubuntu$ ./example.rb 127.0.0.1
 sylvain@ubuntu$ ./example.rb 127.0.0.a
 ```
 
+Oniguruma is a regular expression library that is written in C programming language. It supports a wide range of regular expression syntax, including some advanced features like lookahead/behind assertions and named capture groups. It is used in many programming languages, text editors, and other tools for processing text. The syntax and usage of regular expressions in Oniguruma may vary slightly compared to other regex libraries
+example of implementation
+```
+require 'oniguruma'
+
+# Create a regular expression pattern
+pattern = Oniguruma::ORegexp.new("^[a-z]+$")
+
+# Check if the pattern matches a string
+if pattern =~ "hello"
+  puts "Match found!"
+else
+  puts "No match found."
+end
+```
+
 ## About
 ```Regex```
 ```DevOps```
