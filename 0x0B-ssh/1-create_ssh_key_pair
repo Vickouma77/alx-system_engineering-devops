@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Generate a new RSA key pair
-
-ssh-keygen -b 4096 -f school -t rsa -N betty
+# This script creates an RSA key pair
+if [ ! -d ~/.ssh ]; then
+    mkdir ~/.ssh
+fi
+ssh-keygen -t rsa -f ~/.ssh/school -N ""

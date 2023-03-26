@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#connecting to server 100.26.136.191 using ssh
+#connecting to server 204.236.223.223 using ssh
 
 
-ssh -i ~/.ssh/school ubuntu@100.26.136.191
+ssh -i ~/.ssh/school ubuntu@204.236.223.223
