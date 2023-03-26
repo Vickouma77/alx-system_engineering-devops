@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # This script creates an RSA key pair
-if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh
-fi
-ssh-keygen -t rsa -f ~/.ssh/school -N ""
+
+# Define variables
+KEY_NAME="school"
+BITS="4096"
+PASSPHRASE="betty"
+
+# Generate key pair
+ssh-keygen -t rsa -b $BITS -N $PASSPHRASE -f ~/.ssh/$KEY_NAME
