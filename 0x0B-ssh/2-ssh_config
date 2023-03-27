@@ -1,5 +1,5 @@
 # ssh config file
-Host 204.236.223.223
+Host 100.26.219.194
     IdentityFile ~/.ssh/school
     PreferredAuthentications publickey
     PasswordAuthentication no
