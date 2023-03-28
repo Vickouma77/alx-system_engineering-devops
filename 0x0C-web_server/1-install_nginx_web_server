@@ -2,34 +2,7 @@
 # installs nginx and configure it to listen on port 80
 # print "Hello World"
 
-apt-get update
+apt-get -y update
 apt-get -y install nginx
-
-cat << EOF > /etc/nginx/sites-available/default
-server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-
-        root /var/www/html;
-
-        index index.html;
-
-        location / {
-                try_files \$uri \$uri/ =404;
-        }
-
-        location /nginx_status {
-            stub_status on;
-            access_log   off;
-            allow 127.0.0.1;
-            deny all;
-        }
-
-}
-EOF
-
-service nginx restart
-
-echo "Hello World!" > /var/www/html/index.html
-curl http://localhost/
-
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx start
