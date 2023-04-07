@@ -33,12 +33,12 @@ defaults
     errorfile 503 /etc/haproxy/errors/503.http
     errorfile 504 /etc/haproxy/errors/504.http
 
-frontend vick.tech-https-frontend
-    bind *:443 ssl crt /etc/letsencrypt/live/www.vickouma.tech/fullchain.pem
+frontend vickouma.tech-https-frontend
+    bind *:443 ssl crt /etc/letsencrypt/live/www.example.com/fullchain.pem
     http-request set-header X-Forwarded-Proto https
-    default_backend aysuarex.tech-backend
+    default_backend vickouma.tech-backend
 
-backend vick.tech-backend
+backend vickouma.tech-backend
     balance roundrobin
     server 132505-web-01 100.26.219.194:80 check
     server 132505-web-02 52.204.61.174:80 check
