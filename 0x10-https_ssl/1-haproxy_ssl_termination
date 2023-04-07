@@ -35,7 +35,7 @@ defaults
 
 # start of parameters for aysuarex.tech
 frontend vickouma.tech-http-frontend
-	bind	 *:80
+	bind 52.201.177.17:443 ssl crt /etc/haproxy/ssl/mycert.pem
 	http-request set-header X-Forwarded-Proto http
 	default_backend	 vickouma.tech-backend
 
