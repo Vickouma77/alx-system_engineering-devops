@@ -13,6 +13,5 @@ if __name__ == '__main__':
     employee = requests.get(url + "users/{}".format(sys.argv[1])).json()
     todos = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
 
-
     with open("{}.csv".format(user_id), "w", newline="") as f:
         writer = csv.writer(f)
