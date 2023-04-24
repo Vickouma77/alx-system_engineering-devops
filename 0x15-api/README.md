@@ -7,11 +7,11 @@ This project is aimed at learning the basics of APIs and how to integrate them i
 <!--python--><a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-Downloads-blue.svg"></a>  <!--flask--><a href="https://flask.palletsprojects.com/en/2.0.x/installation/"><img src="https://img.shields.io/badge/Flask-Installation-green.svg"></a> 
 
 ## How to Run the Project
-    Clone the repository into your local machine
-    Navigate to the project directory using a command prompt
-    Run the following command to install the required dependencies: pip install -r requirements.txt
-    Run the following command to start the server: python3 app.py
-    The server should now be running on http://localhost:5000/
+Clone the repository into your local machine
+Navigate to the project directory using a command prompt
+Run the following command to install the required dependencies: ```pip install -r requirements.txt```
+Run the following command to start the server: ```python3 app.py```
+The server should now be running on http://localhost:5000/
 
 ## Features
     API Integration: This project teaches you how to integrate APIs into your applications.
