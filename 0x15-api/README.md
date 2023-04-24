@@ -9,8 +9,8 @@ This project is aimed at learning the basics of APIs and how to integrate them i
 ## How to Run the Project
     Clone the repository into your local machine
     Navigate to the project directory using a command prompt
-    Run the following command to install the required dependencies: ```pip install -r requirements.txt```
-    Run the following command to start the server: ```python3 app.py```
+    Run the following command to install the required dependencies: pip install -r requirements.txt
+    Run the following command to start the server: python3 app.py
     The server should now be running on http://localhost:5000/
 
 ## Features
