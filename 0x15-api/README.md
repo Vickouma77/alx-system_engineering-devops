@@ -14,10 +14,8 @@ Run the following command to start the server: ```python3 app.py```
 The server should now be running on http://localhost:5000/
 
 ## Features
-    API Integration: This project teaches you how to integrate APIs into your applications.
-    Authentication: The project covers authentication, which is an essential aspect of API development.
-    Endpoints: The project explains how to create and manage endpoints.
-    Data Manipulation: You will learn how to manipulate data from APIs using Python.
+API Integration: This project teaches you how to integrate APIs into your applications.
+Authentication: The project covers authentication, which is an essential aspect of API development.
+Endpoints: The project explains how to create and manage endpoints.
+Data Manipulation: You will learn how to manipulate data from APIs using Python.
 
-## Credits
-This project is based on the API Learning Project by Vickouma77.
