@@ -1,32 +1,32 @@
 server {
-	listen 80 default_server;
-	listen [::]:80 ipv6only=on default_server;
-	server_name 100.26.219.194;
+    listen 80;
+    server_name 100.26.219.194;
 
-	root /var/www/html;
+    root /var/www/html;
 
-	location /hbnb_static/ {
-		alias /data/web_static/current/;
-		autoindex off;
-	}
+    location /hbnb_static/ {
+        alias /data/web_static/current/;
+        autoindex off;
+    }
 
-	index index.html index.htm index.nginx-debian.html;
-	rewrite ^/redirect_me https://github.com/vickouma77 permanent;
+    index index.html index.htm index.nginx-debian.html;
 
-	error_page 404 /custom_404.html;
+    rewrite ^/redirect_me https://github.com/vickouma77 permanent;
 
-	location = /custom_404.html {
-		root /usr/share/nginx/html;
-		internal;
-	}
+    error_page 404 /custom_404.html;
 
-	location /airbnb-onepage/ {
-		include proxy_params;
-                proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
-        }
+    location = /custom_404.html {
+        root /usr/share/nginx/html;
+        internal;
+    }
 
-	location / {
-		try_files $uri $uri/ =404;
-	}
+    location /airbnb-onepage/ {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
 
+    location / {
+        try_files $uri $uri/ =404;
+    }
 }
